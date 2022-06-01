@@ -46,11 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontWeight: FontWeight.w900))),
           Align(
               alignment: Alignment.center,
-              child: SizedBox(
-                width: 230,
-                height: 180,
-                child: ColoredBox(
-                  color: const Color(0xFF6D6D6D),
+              child: ColoredBox(
+                color: const Color(0xFF6D6D6D),
+                child: SizedBox(
+                  width: 230,
+                  height: 180,
                   child: Center(
                     child: Text(millisecondsText,
                         textAlign: TextAlign.center,
@@ -82,11 +82,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       break;
                   }
                 }),
-                child: SizedBox(
-                  width: 200,
-                  height: 140,
-                  child: ColoredBox(
-                    color: _gerButtonColor(),
+                child: ColoredBox(
+                  color: _gerButtonColor(),
+                  child: SizedBox(
+                    width: 200,
+                    height: 140,
                     child: Center(
                       child: Text(_getButtonText(),
                           textAlign: TextAlign.center,
@@ -106,11 +106,11 @@ class _MyHomePageState extends State<MyHomePage> {
   String _getButtonText() {
     switch (gameState) {
       case GameState.readyToStart:
-        return "Start";
+        return "START";
       case GameState.waiting:
-        return "Wait";
+        return "WAIT";
       case GameState.canBeStopped:
-        return "Stop";
+        return "STOP";
     }
   }
 
